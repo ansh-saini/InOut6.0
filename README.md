@@ -1,1 +1,2 @@
-# InOut6.0
+# fifthStrategy
+Project for UHack 4.0
