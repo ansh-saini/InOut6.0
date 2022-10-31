@@ -1,10 +1,12 @@
-from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate
+from django.contrib.auth import login as django_login
+from django.contrib.auth import logout as django_logout
+from django.shortcuts import redirect, render
 from django.urls import reverse
-from .serializers import UserSerializer
-from rest_framework.response import Response
-from django.contrib.auth import authenticate, login as django_login, logout as django_logout
 from rest_framework.decorators import api_view
+from rest_framework.response import Response
 
+from .serializers import UserSerializer
 
 # Create your views here.
 
