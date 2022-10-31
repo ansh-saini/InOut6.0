@@ -121,7 +121,7 @@ const conf = {
         datasets : investment_data.map(obj => {
             return {
                 label : obj.company.name,
-                data : obj.plot_coords.split(",").map(val => parseFloat(val)),
+                data : obj.plot_coords.split(",").map(val => parseFloat(val).toFixed(2)),
                 pointBorderWidth: 2,
                 pointHoverRadius: 4,
                 pointHoverBorderWidth: 1,
@@ -213,7 +213,7 @@ investment_data.forEach(data => {
 
     canvas.className = 'ml-auto mr-auto'
     canvas.style.maxWidth = "900px"
-    const plots = data.plot_coords.split(",").map(v => parseFloat(v))
+    const plots = data.plot_coords.split(",").map(v => parseFloat(v).toFixed(2))
     const buy = []
     const sell = []
 
